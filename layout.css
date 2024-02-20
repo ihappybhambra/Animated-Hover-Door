@@ -81,4 +81,42 @@ body {
               .door:hover .doorfront {
                   transform: rotatey(-160deg);
               }
+
+              .doorback {
+                position: relative;
+                background: linear-gradient(0deg, rgba(193,124,116,1) 13%, rgba(73,88,103,1) 13%, rgba(79,100,124,1) 15%, rgba(87,115,153,1) 15%);
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                outline: 8px solid  rgba(70, 37, 37, 0.979)
+            }
+            .rack{
+                position: absolute;
+                width: 7px;
+                height: 150px;
+                background-color: #a78a7f;
+                top: 90px;
+                left: 100px;
+            } 
+            .rack:before{
+                content: "";
+                position: absolute;
+                width: 70px;
+                height: 10px;
+                border-radius: 30px 30px 0 0;
+                background-color: #8c1c13;
+                top: 150px;
+                left: -30px;
+            }
+
+            .rack:after {
+                content: "";
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                border-bottom: 5px solid #a78a7f;
+                border-right: 5px solid #a78a7f;
+                border-bottom-right-radius: 100%;
+                top: 20px;
+                }
   
