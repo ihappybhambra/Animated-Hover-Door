@@ -1,0 +1,84 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100vh;  
+  }
+  
+  .door {
+      position: relative;
+      width: 170px;
+      height: 270px;
+      cursor: pointer;
+      transform-style: preserve-3d;
+      transform: perspective(2500px);
+      }
+  
+      .doorfront {
+          position: absolute;
+          width: 170px;
+          height: 270px;
+          transform-origin: left;
+          overflow: hidden;
+          box-shadow: 30px 0 50px rgba(0,0,0,0,2);
+          z-index: 1;
+          background-color: #924500;
+          transition: .5s;
+      }
+  
+      .doorfront:before, .doorfront:after {
+          content: "";
+          position: absolute;
+          background-color: #924500;
+          width: 105px;
+          height: 75px;
+          border: 10px ridge #b05500;
+          left: 22.5px;
+              }
+  
+              .doorfront:before {
+                  top: 25px;
+                }
+  
+                .doorfront:after {
+                  top: 155px;
+                }
+  
+                .knob {
+                  position: absolute;
+                  width: 20px;
+                  height: 30px;
+                  background-color:  #EEBA0B;
+                  top: 122px;
+                  left: 145px;
+                  border-radius: 2px;
+                           
+              }
+  
+              .knob:before {
+                  content: "";
+                  position: absolute;
+                  border-radius: 50%;
+                  background-color: #f1c83c;
+                  width: 18px;
+                  height: 18px;
+                  border: 1px solid brown;
+                  box-shadow: 2px 2px rgba(0,0,0,0,2);
+  
+              }
+  
+              .knob::after {
+                  content: "";
+                  position: absolute;
+                  width: 4px;
+                  height: 7px;
+                  background-color: #333;
+                  top: 20px;
+                  left: 8.5px;
+              }
+  
+              .door:hover .doorfront {
+                  transform: rotatey(-160deg);
+              }
+  
