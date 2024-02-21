@@ -186,3 +186,26 @@ body {
                             left: -12px;
                         }
   
+                        .doormat {
+                            position: relative;
+                            perspective: 200px;
+                          }
+
+                          .doormat::before {
+                            content: "";
+                            position: absolute;
+                            width: 170px;
+                            height: 70px;
+                            background: repeating-linear-gradient(#a8763e, #18763e 10px, #9d741a 10px, #9d741a 20px);
+                            top: 20px;
+                            outline: 5px solid #a8763e;
+                            transform: rotatex(45deg);
+                            
+                        }
+
+                        .myname {
+                            position: relative;
+                            bottom: 370px;
+                            display: flex;
+                            justify-content: center;
+                        }
